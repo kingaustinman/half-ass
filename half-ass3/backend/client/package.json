@@ -1,0 +1,17 @@
+{
+  "name": "@half-ass/backend-client",
+  "version": "1.0.0",
+  "description": "Client",
+  "main": "index.js",
+  "scripts": {
+    "lint": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": ""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "abbrev": "^2.0.0"
+  }
+}

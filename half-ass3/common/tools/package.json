@@ -1,0 +1,17 @@
+{
+  "name": "@half-ass/common-tools",
+  "author": {
+    "name": "Half-Ass"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "description": "Common tools configuration",
+  "license": "Proprietary",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "lint": "",
+    "clean": ""
+  }
+}

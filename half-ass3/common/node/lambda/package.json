@@ -1,0 +1,42 @@
+{
+  "name": "@half-ass/common-node-lambda",
+  "author": {
+    "name": "Half-Ass"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "description": "Common Node Lambda code",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "build:watch": "tsc -w",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "clean:files": "rimraf tsconfig.tsbuildinfo dist coverage",
+    "clean:ts": "tsc -b --clean",
+    "clean": "run-s clean:ts clean:files"
+  },
+  "dependencies": {
+    "@half-ass/common-node-logger": "*",
+    "@middy/core": "^4.5.5",
+    "@middy/do-not-wait-for-empty-event-loop": "^4.5.5",
+    "@middy/http-cors": "^4.5.5",
+    "@middy/http-error-handler": "^4.5.5",
+    "@middy/http-json-body-parser": "^4.5.5",
+    "@middy/http-router": "^4.5.5",
+    "axios": "1.4.0",
+    "aws-jwt-verify": "^4.0.0",
+    "aws-lambda": "^1.0.7"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.119",
+    "@types/http-errors": "^2.0.1",
+    "@types/node": "^20.4.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}

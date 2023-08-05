@@ -1,0 +1,181 @@
+{
+  "version": "32.0.0",
+  "artifacts": {
+    "apiStack.assets": {
+      "type": "cdk:asset-manifest",
+      "properties": {
+        "file": "apiStack.assets.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+      }
+    },
+    "apiStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://549476090449/us-west-2",
+      "properties": {
+        "templateFile": "apiStack.template.json",
+        "tags": {
+          "deployment-qualifier": "asd"
+        },
+        "validateOnSynth": false,
+        "assumeRoleArn": "arn:${AWS::Partition}:iam::549476090449:role/cdk-hnb659fds-deploy-role-549476090449-us-west-2",
+        "cloudFormationExecutionRoleArn": "arn:${AWS::Partition}:iam::549476090449:role/cdk-hnb659fds-cfn-exec-role-549476090449-us-west-2",
+        "stackTemplateAssetObjectUrl": "s3://cdk-hnb659fds-assets-549476090449-us-west-2/a6d055b1f716a4b8f1b87d715ea546a75463ce2cea887cfc11e3d7f16440c7a6.json",
+        "requiresBootstrapStackVersion": 6,
+        "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version",
+        "additionalDependencies": [
+          "apiStack.assets"
+        ],
+        "lookupRole": {
+          "arn": "arn:${AWS::Partition}:iam::549476090449:role/cdk-hnb659fds-lookup-role-549476090449-us-west-2",
+          "requiresBootstrapStackVersion": 8,
+          "bootstrapStackVersionSsmParameter": "/cdk-bootstrap/hnb659fds/version"
+        },
+        "stackName": "halfass-asd-scrumplapi-apiStack"
+      },
+      "dependencies": [
+        "apiStack.assets"
+      ],
+      "metadata": {
+        "/apiStack": [
+          {
+            "type": "aws:cdk:stack-tags",
+            "data": [
+              {
+                "Key": "deployment-qualifier",
+                "Value": "asd"
+              }
+            ]
+          }
+        ],
+        "/apiStack/scrumpl-handler/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scrumplhandlerServiceRoleA0330258"
+          }
+        ],
+        "/apiStack/scrumpl-handler/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scrumplhandlerF1B655B6"
+          }
+        ],
+        "/apiStack/scrumpl-handler/LogRetention/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "scrumplhandlerLogRetentionCEEA7066"
+          }
+        ],
+        "/apiStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRole9741ECFB"
+          }
+        ],
+        "/apiStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aServiceRoleDefaultPolicyADDA7DEB"
+          }
+        ],
+        "/apiStack/LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8a/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "LogRetentionaae0aa3c5b4d4f87b02d85b201efdd8aFD4BFC8A"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapi18A9123C"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/DefaultStage/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiDefaultStage63517571"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--/lambda-integration-0/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETlambdaintegration0EBAF1216"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--/lambda-integration-0-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETlambdaintegration0Permission526022B3"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETB3B905A4"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc/lambda-integration-1/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabclambdaintegration13CDB18B0"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc/lambda-integration-1-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabclambdaintegration1Permission0157F76C"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabcEE520C12"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc--{orderNumber}/lambda-integration-2/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabcorderNumberlambdaintegration29B5A05D4"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc--{orderNumber}/lambda-integration-2-Permission": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabcorderNumberlambdaintegration2Permission678B8865"
+          }
+        ],
+        "/apiStack/api/httpApiLambda-api/GET--abc--{orderNumber}/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "apihttpApiLambdaapiGETabcorderNumber8FB2C9A3"
+          }
+        ],
+        "/apiStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata"
+          }
+        ],
+        "/apiStack/BootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "BootstrapVersion"
+          }
+        ],
+        "/apiStack/CheckBootstrapVersion": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CheckBootstrapVersion"
+          }
+        ]
+      },
+      "displayName": "apiStack"
+    },
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    }
+  }
+}

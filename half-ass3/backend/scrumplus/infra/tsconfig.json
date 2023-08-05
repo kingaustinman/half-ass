@@ -1,0 +1,10 @@
+{
+  "extends": "@half-ass/common-tools/ts/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist"
+  },
+  "exclude": ["cdk.out", "./dist/**/*"],
+  "references": [
+    { "path": "../../../common/infra/cdk" }
+  ]
+}

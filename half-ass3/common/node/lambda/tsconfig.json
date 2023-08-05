@@ -1,0 +1,11 @@
+{
+  "extends": "@half-ass/common-tools/ts/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "composite": true
+  },
+  "exclude": ["cdk.out", "./dist/**/*"],
+  "references": [
+    { "path": "../logger" }
+  ]
+}

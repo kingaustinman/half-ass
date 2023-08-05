@@ -1,0 +1,41 @@
+{
+  "name": "@half-ass/backend-scrumplus-infra",
+  "author": {
+    "name": "Half-Ass"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "description": "Scrum+ API Infra",
+  "license": "Proprietary",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc -b",
+    "build:watch": "tsc -w",
+    "cdk": "npx cdk --require-approval=never",
+    "cdk:bootstrap": "npx cdk bootstrap",
+    "cdk:synth": "npx cdk --require-approval=never synth --all",
+    "cdk:diff": "npx cdk diff --all",
+    "cdk:deploy": "npx cdk --require-approval=never deploy --all",
+    "cdk:destroy": "npx cdk --require-approval=never destroy --all",
+    "lint": "eslint bin/ src/",
+    "lint:fix": "eslint bin/ src/ --fix",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean:files": "rimraf tsconfig.tsbuildinfo dist coverage",
+    "clean:ts": "tsc -b --clean",
+    "clean": "run-s clean:files clean:ts"
+  },
+  "devDependencies": {
+    "@aws-cdk/aws-apigatewayv2-integrations-alpha": "^2.89.0-alpha.0",
+    "@types/node": "^20.4.5",
+    "aws-cdk": "^2.88.0",
+    "esbuild": "^0.18.17",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@half-ass/common-infra-cdk": "*",
+    "aws-cdk-lib": "^2.88.0"
+  }
+}

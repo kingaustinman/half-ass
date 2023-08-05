@@ -1,0 +1,32 @@
+{
+  "name": "@half-ass/common-node-logger",
+  "author": {
+    "name": "Half-Ass"
+  },
+  "version": "1.0.0",
+  "private": true,
+  "description": "Common Node Lambda code",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "types": "./src/index.ts",
+  "scripts": {
+    "build": "tsc -b",
+    "build:watch": "tsc -w",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "clean:files": "rimraf tsconfig.tsbuildinfo dist coverage",
+    "clean:ts": "tsc -b --clean",
+    "clean": "run-s clean:ts clean:files"
+  },
+  "dependencies": {
+    "nanoid": "^4.0.2",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  }
+}
